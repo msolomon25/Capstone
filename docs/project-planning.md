@@ -5,6 +5,12 @@ I want to build an application that helps writers log/keep track of important in
 
 ---
 
+## Color Palette
+
+![palette](Color-Palette.jpg)
+
+---
+
 ## Define Audience
 - Casual Writers
 - Professional Writers
@@ -61,50 +67,57 @@ https://app.mural.co/t/madori8859/m/madori8859/1699581502636/361920cb57f1b62ead4
 
 ## Competitor Research
 https://www.campfirewriting.com/write/for-novelists?utm_source=youtube&utm_medium=video&utm_campaign=AN_Q4_22
-Likes:
-Dislikes:
-What I’ll do to be different:
+- Likes: You can post and share your stories on their site, You can read other peoples stories, has many useful features
+- Dislikes: So many features it's kinda overwhelming
+- What I’ll do to be different: Have my site be a bit simpler
 
 https://www.worldanvil.com/?gad_source=1&gclid=Cj0KCQiAjMKqBhCgARIsAPDgWlzdKIVRN3bpEdVlC-71GtYJ-o0d9WRPq_b9Nd3DtcjSpZ76F2SlHscaAvHoEALw_wcB
-Likes:
-Dislikes:
-What I’ll do to be different:
+- Likes: Useful features for RPG players
+- Dislikes: Design is bland, Not as intuitive as campfire
+- What I’ll do to be different: Better design, Have a tag system
 
-https://plottr.com/?utm_source=sourceforge&utm_medium=paid&utm_campaign=sourceforgelisting
-Likes:
-Dislikes:
-What I’ll do to be different:
-
-https://www.literatureandlatte.com/scrivener/overview
-Likes:
-Dislikes:
-What I’ll do to be different:
 
 https://wavemakercards.com/
-Likes:
-Dislikes:
-What I’ll do to be different:
+- Likes: Easy to navigate
+- Dislikes: design is too simple/bland, has no tutorial, limited features
+- What I’ll do to be different: Include a popup tutorial
 
-https://novascriber.home.blog/
-Likes:
-Dislikes:
-What I’ll do to be different:
+
 
 ---
 
 ## Wireframes
 
-- add here
+Home Page
+
+![Home Page](Wireframe-Home.png)
+
+About Page
+
+![About Page](Wireframe-About.png)
+
+Resources Page
+
+![Resources Page](Wireframe-Resources.png)
+
+Story Page
+
+![Story Page](Wireframe-Story-Page.png)
+
+Contact Page
+
+![Contact Page](Wireframe-Contact.png)
 ---
 
 ## User Flow Diagram
 
-- add here
+![User Flow Diagram](User-Flow-Diagram.jpg)
+
 
 ---
 
 ## SWOT Analysis Link
 
-- add here
+https://docs.google.com/document/d/1GzL5fSeSnXrOROq4O58momj1FHKFh7ZkVM2hgqTdxeM/edit?usp=sharing
 
 ---
