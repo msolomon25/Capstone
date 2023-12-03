@@ -1,10 +1,61 @@
 h1{
-  font-style: italic;
-  color: #519D5D;
+  color: #45b0ea;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
 
 }
 
 nav{
   color: #1F1D5A;
 
+}
+
+.largeHeader {
+  background-image: url(HeaderImgWNav.jpg);
+  height: 1080px;
+  width: 1920px;
+  background-color: aliceblue;
+
+}
+
+.smallHeader {
+  background-image: url(HeaderSmall.jpg);
+  height: 440px;
+  width: 1920px;
+  background-color: aliceblue;
+
+}
+
+
+#logo {
+  padding-top: 30px;
+  padding-left: 60px;
+  max-width: 400px;
+}
+
+nav {
+  padding-left: 60px;
+}
+
+
+h2{
+  color: #1F1D5A;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
+
+}
+
+h3{
+  color: #45b0ea;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
+
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1F1D5A;
+  padding-left: 60px;
+  max-width: 600px;
+  text-align: justify;
 }
