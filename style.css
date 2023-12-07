@@ -1,0 +1,104 @@
+h1{
+  color: #2AD9E6;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
+
+}
+
+.topNav {
+  background-color: #0E1C1F;
+  overflow: hidden;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+
+
+}
+
+.topNav a {
+  float: right;
+  color: aliceblue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-right: 40px;
+}
+
+#logo {
+  float: left;
+  position: absolute;
+  text-align: center;
+
+}
+
+#logo {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  padding-left: 60px;
+  max-width: 400px;
+  min-width: 150px;
+}
+
+#lrgHeader {
+  background-image: url(InkBg.svg);
+  height: 500px;
+  width: 890px;
+  background-color: rgb(240, 248, 255);
+  position: relative;
+  text-align: right;
+
+}
+
+.topNav a:hover {
+  background-color: #2AD9E6;
+  color: #0E1C1F;
+}
+
+.topNav a.active{
+  background-color: #2AD9E6;
+  color: #0E1C1F;
+
+}
+
+
+
+.smallHeader {
+  background-image: url(HeaderSmall.jpg);
+  height: 440px;
+  width: 1920px;
+  background-color: aliceblue;
+
+}
+
+
+
+
+.welcome {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+
+h2{
+  color: #0E1C1F;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
+
+}
+
+h3{
+  color: #2AD9E6;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 60px;
+
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0E1C1F;
+  padding-left: 60px;
+  max-width: 600px;
+  text-align: justify;
+}
