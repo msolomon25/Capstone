@@ -27,17 +27,33 @@
 
         <img src="iWLogo.svg" alt="InkWizard Logo" style="width:10%" id = "logo">
 
-        <div class="hidden--mobile"></div>
+        <div id="hiddenMobile">
 
-        <a href = "#contact" class="hidden--mobile">Contact Us</a>
-        <a href = "#story-page" class="hidden--mobile">Story Page</a>
-        <a href = "#resources" class="hidden--mobile">Resources</a>
-        <a href = "#about" class="hidden--mobile">About</a>
-        <a class = "active hidden--mobile" href = "#home">Home</a>
+        <a href = "#contact" class="mobile">Contact Us</a>
+        <a href = "#story-page" class="mobile">Story Page</a>
+        <a href = "#resources" class="mobile">Resources</a>
+        <a href = "#about" class="mobile">About</a>
+        <a class = "active mobile" href = "#home">Home</a>
 
       </div>
 
-        <i class="fa-solid fa-bars"></i>
+
+      <div class="hamburgerMenu">
+
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
+      </div>
+
+
+
+      <a href="javascript:void(0);" class="hMenu" onclick="toggleMenu()">
+
+        <i class="fa-solid fa-bars" style="font-size: 200%;"></i>
+
+      </a>
+
 
 
 
@@ -45,44 +61,64 @@
 
    </header>
 
-   <div id = "lrgHeader">
+   <div class = "headerGrid">
 
-    <!-- <img src="InkBg.jpg" alt="Header image" style="width:60%" > -->
+    <div id = "lrgHeader"> </div>
 
+    <div id = "headerSideBar">
 
+      <img src="WelToIw.svg" alt="InkWizard Welcome Logo" style="width:30%" id = "welcomeLogo">
+
+      <h2 id = "welcomeSH">We help you bring your stories to life!</h2>
+    </div>
 
 
    </div>
-   <H1 id = "welcome">Welcome to InkWizard</H1>
-      <h2 id = "welcomeSH">We help you bring your stories to life!</h2>
+
+
+
+
+
 
 
     <main>
 
+      <div class="centeredContent">
+
+        <div class="centered">
+
+          <h3 class="h3Padded">Plan your story</h3>
+
+          <p>Plan your story chapter by chapter and make it easy to keep track of important information!</p>
+
+          <h3 class="h3Padded">Create dynamic characters</h3>
+
+          <p>Add character profiles to flesh out your characters and keep track of things like
+            personality traits, physical appearance, backstories ect.</p>
+
+            <h3 class="h3Padded">Learn how to become a better writer</h3>
+
+          <p>With InkWizard you get access to a wealth of resources and information.</p>
+
+          </div>
+        </div>
 
 
-      <h3>Plan your story</h3>
 
-      <p>Plan your story chapter by chapter and make it easy to keep track of important information!</p>
 
-      <h3>Create dynamic characters</h3>
 
-      <p>Add character profiles to flesh out your characters and keep track of things like
-        personality traits, physical appearance, backstories ect.</p>
-
-        <h3>Learn how to become a better writer</h3>
-
-      <p>With InkWizard you get access to a wealth of resources and information.</p>
 
 
     </main>
 
 
-<footer>
+    <footer>
+
+      <img src="WInkLg.svg" alt="InkWizard Logo" style="width:10%" id = "bottomLogo">
 
 
-</footer>
-
+    </footer>
+    <script src="index.js"></script>
 
 
 </html>

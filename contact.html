@@ -20,84 +20,126 @@
 <header>
 
 
-  <div class = "topNav" style="height: 60px;" >
+  <nav class = "topNav" style="height; 60px">
+
+
+
     <img src="iWLogo.svg" alt="InkWizard Logo" style="width:10%" id = "logo">
 
-    <a href = "#contact">Contact Us</a>
-    <a href = "#story-page">Story Page</a>
-    <a href = "#resources">Resources</a>
-    <a href = "#about">About</a>
-    <a class = "active" href = "#home">Home</a>
+    <div class="hidden--mobile"></div>
+
+    <a href = "#contact" class="hidden--mobile">Contact Us</a>
+    <a href = "#story-page" class="hidden--mobile">Story Page</a>
+    <a href = "#resources" class="hidden--mobile">Resources</a>
+    <a href = "#about" class="hidden--mobile">About</a>
+    <a class = "active hidden--mobile" href = "#home">Home</a>
+
   </div>
+
+
+
+  <a href="javascript:void(0);" class="hMenu" onclick="toggleMenu()">
+
+    <i class="fa-solid fa-bars" style="font-size: 200%;"></i>
+
+  </a>
+
+
+
+
+</nav>
 
  </header>
 
 <body>
 
-  <h3>Contact Me</h3>
+  <div class = "headerGrid">
 
-<div class="contactForm">
-
-  <form action="https://formspree.io/f/mnqkeozk" method="POST">
+    <div id = "smallHeader"> </div>
 
 
+   </div>
 
-    <label for="name">Name:</label>
-    <br>
-    <input type="text" name="name" id="name" placeholder="Full Name" required />
-    <br>
-    <br>
+   <div class="centeredContent">
 
-    <label for="email">Email:</label>
-    <br>
-    <input type="email" name="email" id="email" placeholder="you@somewhere.com" />
-    <br>
-    <br>
+    <div class="centered">
 
-    <label for="phone">Phone:</label>
-    <br>
-    <input type="tel" name="phone" id="phone" placeholder="555-555-5555" />
-    <br>
-    <br>
+      <h3 id="contactMe">Contact Me</h3>
 
-      <label for="msg">Subject:</label>
+      <div class="contactForm">
+
+        <form action="https://formspree.io/f/mnqkeozk" method="POST">
+
+
+
+          <label for="name">Name:</label>
+          <br>
+          <input type="text" name="name" id="name" placeholder="Full Name" />
+          <br>
+          <br>
+
+          <label for="email">Email:</label>
+          <br>
+          <input type="email" name="email" id="email" placeholder="you@somewhere.com" />
+          <br>
+          <br>
+
+          <label for="phone">Phone:</label>
+          <br>
+          <input type="tel" name="phone" id="phone" placeholder="555-555-5555" />
+          <br>
+          <br>
+
+            <label for="msg">Subject:</label>
+            <br>
+            <textarea name="message" id="msg" cols="30" rows="10"></textarea>
+
+
+          <br>
+
+          <div>
+            <h5>What's this message about?</h5>
+            <div>
+              <input
+                type="radio"
+                name="subject"
+                value="professional"
+                id="pro"
+                checked
+              />
+              <label for="pro">I'd like to hire you!</label>
+            </div>
+            <div>
+              <input type="radio" name="subject" value="personal" id="personal" />
+              <label for="personal">Personal message</label>
+            </div>
+            <div>
+              <input type="radio" name="subject" value="other" />
+              <label>Don't know/something else</label>
+            </div>
+          </div>
+
+
+      </div>
       <br>
-      <textarea name="message" id="msg" cols="30" rows="10"></textarea>
 
 
-    <br>
+          <input type="submit" value="Submit" id = "buttonS" />
+        </form>
 
-    <div>
-      <h5>What's this message about?</h5>
-      <div>
-        <input
-          type="radio"
-          name="subject"
-          value="professional"
-          id="pro"
-          checked
-        />
-        <label for="pro">I'd like to hire you!</label>
-      </div>
-      <div>
-        <input type="radio" name="subject" value="personal" id="personal" />
-        <label for="personal">Personal message</label>
-      </div>
-      <div>
-        <input type="radio" name="subject" value="other" />
-        <label>Don't know/something else</label>
+        <!-- Include links to socials and a photo of myself -->
       </div>
     </div>
 
 
-</div>
-<br>
-
-
-    <input type="submit" value="Submit" id = "buttonS" />
-  </form>
-
-  <!-- Include links to socials and a photo of myself -->
 
 </body>
+
+<footer>
+
+  <img src="WInkLg.svg" alt="InkWizard Logo" style="width:10%" id = "bottomLogo">
+
+
+</footer>
+
 </html>
