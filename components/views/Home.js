@@ -2,7 +2,7 @@ import html from "html-literal";
 import welcomeImage from "../../assets/img/WelToIw.svg";
 
 export default () => html`
- <main>
+
 
 <div class = "headerGrid">
 
@@ -42,7 +42,7 @@ export default () => html`
 
 
 
-  <script src="index.js"></script>
 
-</main>
+
+
 `

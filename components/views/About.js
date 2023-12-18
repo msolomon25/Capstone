@@ -1,7 +1,7 @@
 import html from "html-literal";
 
 export default () => html`
-<body>
+
 
 <div class = "headerGrid">
 
@@ -26,4 +26,4 @@ much smoother. InkWizard was my solution.
 
 
 
-</body>`
+`

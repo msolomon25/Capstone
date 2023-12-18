@@ -1,5 +1,6 @@
-export { default as Footer } from "../components/Footer";
-export { default as Header } from "../components/Header";
-export { default as Main } from "../components/Main";
-export { default as Nav } from "../components/Nav";
+export { default as About } from "./About";
+export { default as Contact } from "./Contact";
+export { default as Home } from "./Home";
+export { default as Resources } from "./Resources";
+export { default as Story } from "./Story";
 export { default as Links } from "./Links";

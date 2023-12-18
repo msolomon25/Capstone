@@ -4,14 +4,14 @@ export default (links) => html`
   <nav class = "topNav" style="height; 60px">
     <img src="iWLogo.svg" alt="InkWizard Logo" style="width:10%" id="logo">
 
-<ul class="hiddenMobile nav-links">
+<div class="hiddenMobile nav-links">
       ${links
         .map(
-          (link) =>
-            `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`
+          link =>
+            `<a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a>`
         )
         .join("")}
-    </ul>
+    </div>
 
 
 

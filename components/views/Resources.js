@@ -4,7 +4,7 @@ import writerImage from "../../assets/img/writerImg.jpg";
 
 export default () => html`
 
-<body>
+
 
 
   <div class = "headerGrid">
@@ -91,4 +91,4 @@ export default () => html`
 
 
 
-</body>`
+`

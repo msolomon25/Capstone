@@ -1,36 +1,26 @@
-import { Header, Nav, Main, Footer } from "./components";
-
-import * as store from "./store";
-
 import Navigo from "navigo";
 import { capitalize } from "lodash";
 
-const router = new Navigo("/");
+import * as components from "./components";
+import * as store from "./store";
 
 function render(state = store.Home) {
   document.querySelector("#root").innerHTML = `
-    ${Header(state)}
-    ${Nav(store.Links)}
-    ${Main(state)}
-    ${Footer()}
+    ${components.Nav(store.Links, state)}
+    ${components.Main(state)}
   `;
-
   router.updatePageLinks();
 }
 
+const router = new Navigo("/");
 router
-.on({
-  "/": () => render(),
-  ":view": (params) => {
-    let view = capitalize(params.data.view);
-    if (view in store) {
+  .on({
+    "/": () => render(),
+    ":view": params => {
+      let view = capitalize(params.data.view);
       render(store[view]);
-    } else {
-      render(store.Home);
-      console.log(`View ${view} not defined`);
     }
-  },
-})
+  })
 .resolve();
 
 

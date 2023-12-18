@@ -2,7 +2,7 @@ import html from "html-literal";
 
 export default () => html`
 
-<body>
+
 
   <div class = "headerGrid">
 
@@ -142,4 +142,4 @@ export default () => html`
 
    <script src="index.js"></script>
 
-</body>`
+`
