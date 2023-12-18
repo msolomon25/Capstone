@@ -1,8 +1,10 @@
 import html from "html-literal";
 
+import InkWizardLogo from "../assets/img/iWLogo.svg";
+
 export default (links) => html`
   <nav class = "topNav" style="height; 60px">
-    <img src="iWLogo.svg" alt="InkWizard Logo" style="width:10%" id="logo">
+    <img src=${InkWizardLogo} alt="InkWizard Logo" style="width:10%" id="logo">
 
 <div class="hiddenMobile nav-links">
       ${links
