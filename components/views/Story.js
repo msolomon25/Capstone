@@ -5,21 +5,25 @@ export default state => html`
     <div id="smallHeader"></div>
   </div>
 
-
-
-
-
-
   <div id="storyPgGrid">
     <div id="storySidebar">
-      <button class="tabs" onClick="openSection (event, 'characters')" id="defaultOpen">Characters</button>
+      <button
+        class="tabs"
+        onClick="openSection (event, 'characters')"
+        id="defaultOpen"
+      >
+        Characters
+      </button>
 
-      <button class="tabs" onClick="openSection (event, 'chapters')">Chapters</button>
+      <button class="tabs" onClick="openSection (event, 'chapters')">
+        Chapters
+      </button>
 
       <button class="tabs" onClick="openSection (event, 'notes')">Notes</button>
 
-      <button class="tabs" onClick="openSection (event, 'dictionary')">Dictionary</button>
-
+      <button class="tabs" onClick="openSection (event, 'dictionary')">
+        Dictionary
+      </button>
     </div>
 
     <!-- Character Page -->
@@ -147,43 +151,6 @@ export default state => html`
 
       <h3>Notes</h3>
       <!-- Add storage area here -->
-    </div>
-
-    <!-- Dictionary Page -->
-    <!-- <div id="dictionary" class="tabContent">
-      <h3>Look up a word</h3>
-
-      <label for="name">Word here:</label>
-      <br />
-      <input
-        type="text"
-        name="chapterTitle"
-        id="chapterTitle"
-        placeholder="Chapter Title"
-      />
-      <br />
-
-      <input type="submit" value="Submit" id="buttonS" />
-      <br />
-      <br />
-
-      <hr width="100%" size="9" color="#f2f2f2" />
-
-      <h3>Search Results Here</h3> -->
-
-      <!-- ${state.dictionary
-        .map(defResult => {
-          return `<h4>${defResult.word}: ${
-            meanings.definitions.definition
-          } Synonyms:${meanings.synonyms.join(" ")}
-          }</h4>`;
-        })
-        .join("")} -->
-
-
-
-
-
     </div>
   </div>
 
