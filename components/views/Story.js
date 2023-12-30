@@ -141,7 +141,7 @@ export default state => html`
 
       <label for="name">Summary:</label>
       <br />
-      <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
+      <textarea name="bio" id="bio2" cols="40" rows="15"></textarea>
 
       <input type="submit" value="Submit" id="buttonS" />
       <br />
