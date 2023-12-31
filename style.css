@@ -318,7 +318,7 @@ footer{
 
 /* sidebar */
 
-#storySidebar{
+.storySidebar{
   grid-column-start: 1;
   grid-column-end: 2;
   background-color: var(--highlight-color);
@@ -337,7 +337,7 @@ footer{
   width: 20vw;
 }
 
-#storySidebar button{
+.storySidebar button{
 background-color: inherit;
   float: left;
   border: none;
@@ -345,12 +345,12 @@ background-color: inherit;
   transition: 0.3s;
 }
 
-#storySidebar button:hover{
+.storySidebar button:hover{
   background-color: var(--dark-blue);
   color: var(--white);
 }
 
-#storySidebar button.active{
+.storySidebar button.active{
   background-color: var(--white);
   color: var(--highlight-color);
 }

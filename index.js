@@ -23,7 +23,7 @@ function afterRender() {
     document.querySelector("nav > a").classList.toggle("hidden--mobile");
   });
 
-  function openSection(evt, tabType) {
+  function openSection(button, tabType) {
     var i, tabContent, tabs;
 
     tabContent = document.getElementsByClassName("tabContent");
@@ -32,15 +32,33 @@ function afterRender() {
     }
 
     tabs = document.getElementsByClassName("tabs");
+
     for (i = 0; i < tabs.length; i++) {
-      tabs[i].className = tabs[i].className.replace(" active", "");
+      tabs[i].className = (tabs[i].className + " ").replace(" active ", "").trim();
     }
 
     document.getElementById(tabType).style.display = "block";
-    evt.currentTarget.className += " active";
+    button.className += " active";
 
-    document.getElementById("defaultOpen").click();
+    // document.getElementById("defaultOpen").click();
   }
+
+
+  document.querySelector("#tab1").addEventListener("click", () => {
+    openSection(document.querySelector("#tab1"), "characters")
+  });
+
+  document.querySelector("#tab2").addEventListener("click", () => {
+    openSection(document.querySelector("#tab2"), "chapters")
+  });
+
+  document.querySelector("#tab3").addEventListener("click", () => {
+    openSection(document.querySelector("#tab3"), "notes")
+  });
+
+  document.querySelector("#tab4").addEventListener("click", () => {
+    openSection(document.querySelector("#tab4"), "dictionary")
+  });
 }
 
 router.hooks({
@@ -122,3 +140,20 @@ router
 // }
 
 // https://zenquotes.io/api/today
+
+// function openSection(tabType) {
+//   var tabContents = document.getElementsByClassName("tabContent");
+//   for (var i = 0; i < tabContents.length; i++) {
+//     tabContents[i].computedStyleMap.display = "none";
+//   }
+
+//   var tbs = document.getElementsByClassName("tabs");
+//   for (var i = 0; i < tbs.length; i++) {
+//     tbs[i].classList.remove("active-tabs");
+//   }
+
+//   document.getElementById(tabType).style.display = "block";
+//   document
+//     .querySelector("[onclick=\"openSection('" + tabType + "')\"]")
+//     .classList.add("active-tabs");
+// }
