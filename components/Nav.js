@@ -11,17 +11,26 @@ export default links => html`
       id="logo"
     />
 
-    <div class="hiddenMobile nav-links">
+    <i class="fas fa-bars"></i>
+    <ul class="hidden--mobile nav-links">
       ${links
         .map(
           link =>
-            `<a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a>`
+            `<li><a href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a></li>`
         )
         .join("")}
-    </div>
+    </ul>
+    <!-- <div class="hiddenMobile nav-links">
+      ${links
+        .map(
+          link =>
+            `<a id="navResponse" href="/${link.title}" title="${link.title}" data-navigo>${link.text}</a>`
+        )
+        .join("")}
+    </div> -->
 
-    <a href="javascript:void(0);" class="hMenu" onclick="toggleMenu()">
-      <i class="fa-solid fa-bars" style="font-size: 200%;"></i>
+    <!-- <a href="javascript:void(0);" class="hMenu" onclick="toggleMenu()"> -->
+      <!-- <i class="fa-solid fa-bars" style="font-size: 200%;"></i> -->
     </a>
   </nav>
 `;

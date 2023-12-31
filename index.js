@@ -20,7 +20,7 @@ function render(state = store.Home) {
 
 function afterRender() {
   document.querySelector(".fa-bars").addEventListener("click", () => {
-    document.querySelector("nav > a").classList.toggle("hidden--mobile");
+    document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 
   function openSection(button, tabType) {
@@ -34,7 +34,9 @@ function afterRender() {
     tabs = document.getElementsByClassName("tabs");
 
     for (i = 0; i < tabs.length; i++) {
-      tabs[i].className = (tabs[i].className + " ").replace(" active ", "").trim();
+      tabs[i].className = (tabs[i].className + " ")
+        .replace(" active ", "")
+        .trim();
     }
 
     document.getElementById(tabType).style.display = "block";
@@ -43,22 +45,24 @@ function afterRender() {
     // document.getElementById("defaultOpen").click();
   }
 
+  try {
+    document.querySelector("#tab1").addEventListener("click", () => {
+      openSection(document.querySelector("#tab1"), "characters");
+    });
 
-  document.querySelector("#tab1").addEventListener("click", () => {
-    openSection(document.querySelector("#tab1"), "characters")
-  });
+    document.querySelector("#tab2").addEventListener("click", () => {
+      openSection(document.querySelector("#tab2"), "chapters");
+    });
 
-  document.querySelector("#tab2").addEventListener("click", () => {
-    openSection(document.querySelector("#tab2"), "chapters")
-  });
+    document.querySelector("#tab3").addEventListener("click", () => {
+      openSection(document.querySelector("#tab3"), "notes");
+    });
 
-  document.querySelector("#tab3").addEventListener("click", () => {
-    openSection(document.querySelector("#tab3"), "notes")
-  });
+  } catch(err){
+ //Expected error that occurs when navigating to a page other than the story page
+  }
 
-  document.querySelector("#tab4").addEventListener("click", () => {
-    openSection(document.querySelector("#tab4"), "dictionary")
-  });
+
 }
 
 router.hooks({
@@ -140,20 +144,3 @@ router
 // }
 
 // https://zenquotes.io/api/today
-
-// function openSection(tabType) {
-//   var tabContents = document.getElementsByClassName("tabContent");
-//   for (var i = 0; i < tabContents.length; i++) {
-//     tabContents[i].computedStyleMap.display = "none";
-//   }
-
-//   var tbs = document.getElementsByClassName("tabs");
-//   for (var i = 0; i < tbs.length; i++) {
-//     tbs[i].classList.remove("active-tabs");
-//   }
-
-//   document.getElementById(tabType).style.display = "block";
-//   document
-//     .querySelector("[onclick=\"openSection('" + tabType + "')\"]")
-//     .classList.add("active-tabs");
-// }
