@@ -6,22 +6,18 @@ export default state => html`
   </div>
 
   <div id="storyPgGrid">
-    <div id="storySidebar">
-      <button
-        class="tabs"
-        onClick="openSection (event, 'characters')"
-        id="defaultOpen"
-      >
-        Characters
-      </button>
+    <div class="storySidebar">
+      <button class="tabs active-content" id="tab1">Characters</button>
 
-      <button class="tabs" onClick="openSection (event, 'chapters')">
+      <button class="tabs" id="tab2">
         Chapters
       </button>
 
-      <button class="tabs" onClick="openSection (event, 'notes')">Notes</button>
+      <button class="tabs" id="tab3">
+        Notes
+      </button>
 
-      <button class="tabs" onClick="openSection (event, 'dictionary')">
+      <button class="tabs" id="tab4">
         Dictionary
       </button>
     </div>
@@ -153,6 +149,4 @@ export default state => html`
       <!-- Add storage area here -->
     </div>
   </div>
-
-  <!-- <script src="index.js"></script> -->
 `;
