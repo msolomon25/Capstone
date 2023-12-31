@@ -61,6 +61,16 @@ p{
   padding-right: 15%;
 }
 
+#storyPgContent{
+  padding-bottom: 3%;
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+  padding-left: 15%;
+  padding-right: 15%;
+
+}
+
 /* ============================================================================================= */
 
 hr{
@@ -351,8 +361,8 @@ background-color: inherit;
 }
 
 .storySidebar button.active{
-  background-color: var(--white);
-  color: var(--highlight-color);
+  background-color: var(--dark-blue);
+  color: var(--white)
 }
 
 .tabContent{
@@ -444,11 +454,28 @@ text-align: center;
 
 
 @media (min-width: 650px) {
-  nav > .hMenu {
+
+
+  /* nav > .fa-bars {
     display: none;
+  } */
+
+  nav > ul {
+    display: flex;
+    justify-content: right;
+    padding: 0 0;
+    flex-direction: row-reverse;
   }
 
-  nav > .hamburgerMenu {
+  nav > ul > li {
+    /* display: inline-block; */
+    text-decoration: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 15px;
+
+  }
+
+  nav > .fa-bars {
     display: none;
   }
 
@@ -456,7 +483,47 @@ text-align: center;
 }
 
 
-@media only screen and (max-width:650px){
+@media only screen and (max-width:700px){
+
+  /* pizza  */
+  .hidden--mobile {
+    display: none !important;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  nav > i {
+    padding: 0 0;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+  }
+
+  #logo{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0;
+    padding-top: 1rem;
+  }
+
+  nav > ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0;
+    flex-direction: column-reverse;
+  }
+
+  nav > ul > li {
+    padding: 0.5rem;
+    list-style-type: none;
+  }
+/* pizza */
 
   #hiddenMobile{
     position: fixed;
@@ -470,7 +537,12 @@ text-align: center;
     transition: 0.3s;
     box-shadow:
         0 10px 27px rgba(0, 0, 0, 0.05);
+
 }
+
+/* #navResponse{
+  display: none;
+} */
 
   #hiddenMobile .active{
     left: 0;
@@ -551,17 +623,17 @@ text-align: center;
   }
 
 
-  .hidden--mobile {
+  /* .hidden--mobile {
     display: none;
-  }
+  } */
 
 
-  nav{
-    padding-bottom: 50px;
+  /* nav{
+    padding-bottom: 50px; may need to un comment
 
 
 
-  }
+  } */
 
   #lrgHeader {
     display: none;
@@ -582,9 +654,9 @@ text-align: center;
 
   }
 
-  .hamburgerMenu{
+  /* .hamburgerMenu{
     display: block;
-  }
+  } */
 
 }
 
