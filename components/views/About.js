@@ -1,6 +1,8 @@
 import html from "html-literal";
+import booksImg from "../../assets/img/booksImg.jpg";
 
 export default () => html`
+
 
 
 <div class = "headerGrid">
@@ -20,6 +22,9 @@ often write my own short stories. As I got older and started writing longer and 
 began having trouble keeping up with all the little details and my stories declined in quality. I realized if I had a program to help me take notes and keep track of information my writing process would go
 much smoother. InkWizard was my solution.
 </p>
+<div id ="writerPic">
+      <img src=${booksImg} alt="Story Image" style="width:50%" style="height: 15%;">
+    </div>
 
     </div>
   </div>

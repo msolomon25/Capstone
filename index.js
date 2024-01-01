@@ -46,6 +46,7 @@ function afterRender() {
   }
 
   try {
+
     document.querySelector("#tab1").addEventListener("click", () => {
       openSection(document.querySelector("#tab1"), "characters");
     });
@@ -57,10 +58,10 @@ function afterRender() {
     document.querySelector("#tab3").addEventListener("click", () => {
       openSection(document.querySelector("#tab3"), "notes");
     });
-
-  } catch(err){
- //Expected error that occurs when navigating to a page other than the story page
+  } catch (err) {
+    //Expected error that occurs when navigating to a page other than the story page
   }
+
 
 
 }

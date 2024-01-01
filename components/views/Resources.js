@@ -24,6 +24,9 @@ export default () => html`
 
 
       <h3 class="h3Padded">Helpful Resources</h3>
+      <p>Welcome to our resource page! Below are a ton of useful resources for you on your writing
+        journey. Click the underlined links below to learn more.
+      </p>
 
       <br>
       <hr width="100%" size="9" color="#f2f2f2">
@@ -34,6 +37,7 @@ export default () => html`
     visuals for social media, book covers, and much more. Most templates
     and features are free, but a subscription gives users access to more
     content.</p>
+
 
     <a class="links" href="https://createifwriting.com/">Create If Writing</a>
   <p>Every author needs to build an online platform, even if most dread

@@ -9,7 +9,7 @@
 /* headings and paragraphs */
 
 .h3Padded{
-  padding-left: 60px;
+  padding-left: 0px;
 }
 
 #welcomeSH{
@@ -102,7 +102,7 @@ hr{
   color: var(--highlight-color);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
-  padding-left: 60px;
+
 }
 
 
@@ -229,8 +229,8 @@ header{
   background-color: var(--white);
   padding-bottom: 70px;
   /* padding-top: 50px; */
-  width: 1000px;
-  position: ;
+  width: 75vw;
+  /* position: ; */
   text-align: center;
 
   margin: auto;
