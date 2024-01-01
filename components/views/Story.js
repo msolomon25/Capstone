@@ -1,9 +1,19 @@
 import html from "html-literal";
 
+
 export default state => html`
   <div class="headerGrid">
     <div id="smallHeader"></div>
   </div>
+
+  <div class="centeredContent">
+      <div class="centered">
+
+      <h3 class="h3Padded">Welcome to the Story Page!</h3>
+      <p>Click the tabs on the right to add info about your story.</p>
+
+      </div>
+    </div>
 
   <div id="storyPgGrid">
     <div class="storySidebar">
@@ -18,12 +28,7 @@ export default state => html`
       </button>
     </div>
 
-    <!-- <div class="centeredContent">
-      <div class="centered">
-      <h3 class="h3Padded">Welcome to the Story Page!</h3>
-      <p>Click the tabs on the right to add info about your story.</p>
-      </div>
-    </div> -->
+
 
     <!-- Character Page -->
     <div id="characters" class="tabContent">
