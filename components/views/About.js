@@ -23,7 +23,7 @@ began having trouble keeping up with all the little details and my stories decli
 much smoother. InkWizard was my solution.
 </p>
 <div id ="writerPic">
-      <img src=${booksImg} alt="Story Image" style="width:50%" style="height: 15%;">
+      <img src=${booksImg} alt="Story Image" style="width:60%" style="height: 15%;">
     </div>
 
     </div>
