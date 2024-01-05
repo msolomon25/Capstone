@@ -105,6 +105,10 @@ hr{
 
 }
 
+li {
+  list-style: none;
+}
+
 
 
 nav{
