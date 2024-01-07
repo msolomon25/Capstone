@@ -1,5 +1,6 @@
 import html from "html-literal";
 import welcomeImage from "../../assets/img/WelToIw.svg";
+import planImage from "../../assets/img/planImg.jpg";
 
 export default (state) => html`
   <div class="headerGrid">
@@ -26,6 +27,10 @@ export default (state) => html`
         important information!
       </p>
 
+
+      <img src=${planImage} alt="Planning Image" style="width:40%" style="height: 15%;">
+
+
       <h3 class="h3Padded">Create dynamic characters</h3>
 
       <p>
@@ -39,6 +44,11 @@ export default (state) => html`
         With InkWizard you get access to a wealth of resources and information.
         Make sure to check out our resource page!
       </p>
+
+      <h3 class="h3Padded">Writing Prompt Generator</h3>
+      <p>Having trouble with writer's block? Click the button below to get a one sentence writing prompt!
+      </p>
+      <button class="button" type="button">Click Me!</button>
 
       <h3 class="h3Padded">Today's weather</h3>
 

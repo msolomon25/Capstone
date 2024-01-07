@@ -175,7 +175,7 @@ header{
 
 #lrgHeader {
   background-image: url(InkBg.svg);
-   height: 40vw;
+  height: 40vw;
   /* width: 100%;  */
   background-size: contain;
   background-color: rgb(240, 248, 255);
@@ -213,7 +213,7 @@ header{
   color: var(--dark-tone);
 }
 
-.topNav a.active{
+.topNav a:active{
   background-color: var(--highlight-color);
   color: var(--dark-tone);
 
@@ -384,6 +384,19 @@ label {
 
 }
 
+.button{
+  border: 1px solid var(--highlight-color);
+  color: var(--dark-tone);
+  background-color: var(--light-tone);
+}
+
+.button:hover{
+  border: 1px solid var(--dark-tone);
+  background-color: var(--highlight-color);
+  color: var(--white);
+
+}
+
 
 
 
@@ -394,7 +407,8 @@ input[type=text], select, textarea {
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical
+  resize: vertical;
+
 }
 
 input[type=tel], select, textarea {
@@ -418,21 +432,22 @@ input[type=email], select, textarea {
 }
 
 input[type=submit] {
-  background-color: var(--highlight-color);
-  color: var(--dark-tone);
   padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid var(--highlight-color);
+
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  color: var(--dark-tone);
+  background-color: var(--light-tone);
 
 }
 
 input[type=submit]:hover {
-  background-color: var(--dark-tone);
-  color: var(--highlight-color);
+  background-color: var(--highlight-color);
+  color: var(--white);
+  border: 1px solid var(--dark-tone);
 }
 
 

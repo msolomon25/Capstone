@@ -1,4 +1,5 @@
 export default {
   header: "My Story Page",
-  view: "Story"
+  view: "Story",
+  prompts: []
 };
