@@ -19,7 +19,6 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-
   if (state.view === "Story") {
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
@@ -28,7 +27,6 @@ function afterRender(state) {
       // Get the form element
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
-
 
       // Create a request body object to send to the API
       const requestData = {
@@ -39,11 +37,11 @@ function afterRender(state) {
         nationality: inputList.nationality.value,
         occupation: inputList.occupation.value,
         religion: inputList.religion.value,
-        hairColor: inputList.hairColor.value,
-        eyeColor: inputList.eyeColor.value,
+        hair: inputList.hair.value,
+        eye: inputList.eye.value,
         bio: inputList.bio.value,
-        chapterTitle: inputList.chapterTitle.value,
-        chapterSummary: inputList.chapterSummary.value,
+        chapter: inputList.chapter.value,
+        summary: inputList.summary.value,
         noteTitle: inputList.noteTitle.value,
         note: inputList.note.value
       };
@@ -54,7 +52,7 @@ function afterRender(state) {
         // Make a POST request to the API to create a new pizza
         .post(`${process.env.STORY_API}/prompt`, requestData)
         .then(response => {
-        //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
           store.Story.stories.push(response.data);
           router.navigate("/Story");
         })
@@ -65,14 +63,10 @@ function afterRender(state) {
     });
   }
 
-
-
-
   //hamburger menu
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
-
 
   //story page sidebar tabs
   function openSection(button, tabType) {
@@ -98,7 +92,6 @@ function afterRender(state) {
   }
 
   try {
-
     document.querySelector("#tab1").addEventListener("click", () => {
       openSection(document.querySelector("#tab1"), "characters");
     });
@@ -113,9 +106,6 @@ function afterRender(state) {
   } catch (err) {
     //Expected error that occurs when navigating to a page other than the story page
   }
-
-
-
 }
 
 router.hooks({

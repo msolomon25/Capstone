@@ -84,11 +84,11 @@ router.put("/:id", async (request, response) => {
           nationality: body.nationality,
           occupation: body.occupation,
           religion: body.religion,
-          hairColor: body.hairColor,
-          eyeColor: body.eyeColor,
+          hair: body.hair,
+          eye: body.eye,
           bio: body.bio,
-          chapterTitle: body.chapterTitle,
-          chapterSummary: body.chapterSummary,
+          chapter: body.chapter,
+          summary: body.summary,
           noteTitle: body.noteTitle,
           note: body.note
         }

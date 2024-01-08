@@ -37,12 +37,12 @@ const storiesSchema = new mongoose.Schema({
     validate: /^[A-Za-z0-9 ]*$/
   },
 
-  hairColor: {
+  hair: {
     type: String,
     validate: /^[A-Za-z0-9 ]*$/
   },
 
-  eyeColor: {
+  eye: {
     type: String,
     validate: /^[A-Za-z0-9 ]*$/
   },
@@ -52,12 +52,12 @@ const storiesSchema = new mongoose.Schema({
     validate: /^[A-Za-z0-9 ]*$/
   },
 
-  chapterTitle: {
+  chapter: {
     type: String,
     validate: /^[A-Za-z0-9 ]*$/
   },
 
-  chapterSummary: {
+  summary: {
     type: String,
     validate: /^[A-Za-z0-9 ]*$/
   },

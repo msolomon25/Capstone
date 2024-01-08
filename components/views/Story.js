@@ -30,67 +30,67 @@ export default state => html`
       <h3>Character Profiles</h3>
 
       <form id="characterForm" method="POST" action="">
-        <label for="characterName">Name:</label>
+        <label for="name">Name:</label>
         <br />
         <input type="text" name="name" id="name" placeholder="Full Name" />
         <br />
 
-        <label for="characterAge">Age:</label>
+        <label for="age">Age:</label>
         <br />
         <input type="text" name="age" id="age" placeholder="Age" />
         <br />
 
-        <label for="characterGender">Gender:</label>
+        <label for="gender">Gender:</label>
         <br />
         <input type="text" name="gender" id="gender" placeholder="Gender" />
         <br />
 
-        <label for="characterSpecies">Species:</label>
+        <label for="species">Species:</label>
         <br />
-        <input type="text" name="Species" id="Species" placeholder="Species" />
+        <input type="text" name="species" id="species" placeholder="Species" />
         <br />
 
-        <label for="characterNationality">Nationality:</label>
+        <label for="nationality">Nationality:</label>
         <br />
         <input
           type="text"
-          name="Nationality"
-          id="Nationality"
+          name="nationality"
+          id="nationality"
           placeholder="Nationality"
         />
         <br />
 
-        <label for="characterOccupation">Occupation:</label>
+        <label for="occupation">Occupation:</label>
         <br />
         <input
           type="text"
-          name="Occupation"
-          id="Occupation"
+          name="occupation"
+          id="occupation"
           placeholder="Occupation"
         />
         <br />
 
-        <label for="characterReligion">Religion:</label>
+        <label for="religion">Religion:</label>
         <br />
         <input
           type="text"
-          name="Religion"
-          id="Religion"
+          name="religion"
+          id="religion"
           placeholder="Religion"
         />
         <br />
 
-        <label for="characterHair">Hair Color:</label>
+        <label for="hair">Hair Color:</label>
         <br />
-        <input type="text" name="Hair" id="Hair" placeholder="Hair Color" />
-        <br />
-
-        <label for="characterEye">Eye Color:</label>
-        <br />
-        <input type="text" name="Eye" id="Eye" placeholder="Eye Color" />
+        <input type="text" name="hair" id="hair" placeholder="Hair Color" />
         <br />
 
-        <label for="characterBio">Bio</label>
+        <label for="eye">Eye Color:</label>
+        <br />
+        <input type="text" name="eye" id="eye" placeholder="Eye Color" />
+        <br />
+
+        <label for="bio">Bio</label>
         <br />
         <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
 
@@ -120,17 +120,17 @@ export default state => html`
     <div id="chapters" class="tabContent">
       <h3>Create A New Chapter Summary</h3>
 
-      <label for="chapterTitle">Chapter Title:</label>
+      <label for="chapter">Chapter Title:</label>
       <br />
       <input
         type="text"
-        name="chapterTitle"
-        id="chapterTitle"
+        name="chapter"
+        id="chapter"
         placeholder="Chapter Title"
       />
       <br />
 
-      <label for="chapterSummary">Summary:</label>
+      <label for="summary">Summary:</label>
       <br />
       <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
 
