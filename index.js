@@ -15,14 +15,60 @@ function render(state = store.Home) {
 
   router.updatePageLinks();
 
-  afterRender();
+  afterRender(state);
 }
 
-function afterRender() {
+function afterRender(state) {
+  if (state.view === "Story") {
+    // Add an event handler for the submit button on the form
+    document.querySelector("form").addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the form element
+      const inputList = event.target.elements;
+      console.log("Input Element List", inputList);
+      console.log(inputList.chapter);
+      // Create a request body object to send to the API
+      const requestData = {
+        name: inputList.name.value,
+        age: inputList.age.value,
+        gender: inputList.gender.value,
+        species: inputList.species.value,
+        nationality: inputList.nationality.value,
+        occupation: inputList.occupation.value,
+        religion: inputList.religion.value,
+        hair: inputList.hair.value,
+        eye: inputList.eye.value,
+        bio: inputList.bio.value,
+        chapter: inputList.chapter.value,
+        summary: inputList.summary.value,
+        noteTitle: inputList.noteTitle.value,
+        note: inputList.note.value
+      };
+      // Log the request body to the console
+      console.log("request Body", requestData);
+
+      axios
+        // Make a POST request to the API to create a new pizza
+        .post(`${process.env.STORY_API}/prompt`, requestData)
+        .then(response => {
+          //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
+          store.Story.prompts.push(response.data);
+          router.navigate("/Story");
+        })
+        // If there is an error log it to the console
+        .catch(error => {
+          console.log("It failed", error);
+        });
+    });
+  }
+
+  //hamburger menu
   document.querySelector(".fa-bars").addEventListener("click", () => {
     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
   });
 
+  //story page sidebar tabs
   function openSection(button, tabType) {
     var i, tabContent, tabs;
 
@@ -46,7 +92,6 @@ function afterRender() {
   }
 
   try {
-
     document.querySelector("#tab1").addEventListener("click", () => {
       openSection(document.querySelector("#tab1"), "characters");
     });
@@ -61,9 +106,6 @@ function afterRender() {
   } catch (err) {
     //Expected error that occurs when navigating to a page other than the story page
   }
-
-
-
 }
 
 router.hooks({

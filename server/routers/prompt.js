@@ -1,14 +1,14 @@
 import { Router } from "express";
-import Prompt from "../models/Prompt.js";
+import Story from "../models/Prompt.js";
 
 const router = Router();
 
-// Create prompt route
+// Create story route
 router.post("/", async (request, response) => {
   try {
-    const newPrompt = new Prompt(request.body);
+    const newStory = new Story(request.body);
 
-    const data = await newPrompt.save();
+    const data = await newStory.save();
 
     response.json(data);
   } catch (error) {
@@ -28,7 +28,7 @@ router.get("/", async (request, response) => {
     // Store the query params into a JavaScript Object
     const query = request.query; // Defaults to an empty object {}
 
-    const data = await Prompt.find(query);
+    const data = await Story.find(query);
 
     response.json(data);
   } catch (error) {
@@ -42,7 +42,7 @@ router.get("/", async (request, response) => {
 // Get a single prompt by ID
 router.get("/:id", async (request, response) => {
   try {
-    const data = await Prompt.findById(request.params.id);
+    const data = await Story.findById(request.params.id);
 
     response.json(data);
   } catch (error) {
@@ -56,7 +56,7 @@ router.get("/:id", async (request, response) => {
 // Delete a prompt by ID
 router.delete("/:id", async (request, response) => {
   try {
-    const data = await Prompt.findByIdAndRemove(request.params.id, {});
+    const data = await Story.findByIdAndRemove(request.params.id, {});
 
     response.json(data);
   } catch (error) {
@@ -67,16 +67,30 @@ router.delete("/:id", async (request, response) => {
   }
 });
 
-// Update a single pizza by ID
+// Update a single prompt by ID
 router.put("/:id", async (request, response) => {
   try {
     const body = request.body;
 
-    const data = await Prompt.findByIdAndUpdate(
+    const data = await Story.findByIdAndUpdate(
       request.params.id,
       {
+        //need to add form info here
         $set: {
-          content: body.content
+          name: body.name,
+          age: body.age,
+          gender: body.gender,
+          species: body.species,
+          nationality: body.nationality,
+          occupation: body.occupation,
+          religion: body.religion,
+          hair: body.hair,
+          eye: body.eye,
+          bio: body.bio,
+          chapter: body.chapter,
+          summary: body.summary,
+          noteTitle: body.noteTitle,
+          note: body.note
         }
       },
       {

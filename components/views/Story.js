@@ -25,131 +25,187 @@ export default state => html`
       </button>
     </div>
 
-    <!-- Character Page -->
-    <div id="characters" class="tabContent">
-      <h3>Character Profiles</h3>
+    <form id="characterForm" method="POST" action="">
+      <!-- Character Page -->
+      <div id="characters" class="tabContent">
+        <h3>Character Profiles</h3>
 
-      <label for="name">Name:</label>
-      <br />
-      <input type="text" name="name" id="name" placeholder="Full Name" />
-      <br />
+        <label for="name">Name:</label>
+        <br />
+        <input type="text" name="name" id="name" placeholder="Full Name" />
+        <br />
 
-      <label for="name">Age:</label>
-      <br />
-      <input type="text" name="age" id="age" placeholder="Age" />
-      <br />
+        <label for="age">Age:</label>
+        <br />
+        <input type="text" name="age" id="age" placeholder="Age" />
+        <br />
 
-      <label for="name">Gender:</label>
-      <br />
-      <input type="text" name="gender" id="gender" placeholder="Gender" />
-      <br />
+        <label for="gender">Gender:</label>
+        <br />
+        <input type="text" name="gender" id="gender" placeholder="Gender" />
+        <br />
 
-      <label for="name">Species:</label>
-      <br />
-      <input type="text" name="Species" id="Species" placeholder="Species" />
-      <br />
+        <label for="species">Species:</label>
+        <br />
+        <input type="text" name="species" id="species" placeholder="Species" />
+        <br />
 
-      <label for="name">Nationality:</label>
-      <br />
-      <input
-        type="text"
-        name="Nationality"
-        id="Nationality"
-        placeholder="Nationality"
-      />
-      <br />
+        <label for="nationality">Nationality:</label>
+        <br />
+        <input
+          type="text"
+          name="nationality"
+          id="nationality"
+          placeholder="Nationality"
+        />
+        <br />
 
-      <label for="name">Occupation:</label>
-      <br />
-      <input
-        type="text"
-        name="Occupation"
-        id="Occupation"
-        placeholder="Occupation"
-      />
-      <br />
+        <label for="occupation">Occupation:</label>
+        <br />
+        <input
+          type="text"
+          name="occupation"
+          id="occupation"
+          placeholder="Occupation"
+        />
+        <br />
 
-      <label for="name">Religion:</label>
-      <br />
-      <input type="text" name="Religion" id="Religion" placeholder="Religion" />
-      <br />
+        <label for="religion">Religion:</label>
+        <br />
+        <input
+          type="text"
+          name="religion"
+          id="religion"
+          placeholder="Religion"
+        />
+        <br />
 
-      <label for="name">Hair Color:</label>
-      <br />
-      <input type="text" name="Hair" id="Hair" placeholder="Hair Color" />
-      <br />
+        <label for="hair">Hair Color:</label>
+        <br />
+        <input type="text" name="hair" id="hair" placeholder="Hair Color" />
+        <br />
 
-      <label for="name">Eye Color:</label>
-      <br />
-      <input type="text" name="Eye" id="Eye" placeholder="Eye Color" />
-      <br />
+        <label for="eye">Eye Color:</label>
+        <br />
+        <input type="text" name="eye" id="eye" placeholder="Eye Color" />
+        <br />
 
-      <label for="name">Bio</label>
-      <br />
-      <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
+        <label for="bio">Bio</label>
+        <br />
+        <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
 
-      <input type="submit" value="Submit" id="buttonS" />
+        <input type="submit" value="Submit" id="buttonS" />
 
-      <hr width="100%" size="9" color="#f2f2f2" />
+        <hr width="100%" size="9" color="#f2f2f2" />
+        <!-- </form> -->
 
-      <!-- Add storage area here -->
-    </div>
+        <h3>Characters</h3>
 
-    <!-- Chapters Page -->
-    <div id="chapters" class="tabContent">
-      <h3>Create A New Chapter Summary</h3>
+        <table id="characterTable">
+          <div class="tableScroll">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Species</th>
+              <th>Nationality</th>
+              <th>Occupation</th>
+              <th>Religion</th>
+              <th>Hair Color</th>
+              <th>Eye Color</th>
+              <th>Bio</th>
+            </tr>
 
-      <label for="name">Chapter Title:</label>
-      <br />
-      <input
-        type="text"
-        name="chapterTitle"
-        id="chapterTitle"
-        placeholder="Chapter Title"
-      />
-      <br />
 
-      <label for="name">Summary:</label>
-      <br />
-      <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.name}</td><td>${prompt.age}</td><td>${prompt.gender}</td><td>${prompt.species}</td>
+            <td>${prompt.nationality}</td><td>${prompt.occupation}</td><td>${prompt.religion}</td><td>${prompt.hair}</td>
+            <td>${prompt.eye}</td><td>${prompt.bio}</td></tr>`;
+            })
+            .join("")}
+        </table>
+        </div>
+      </div>
 
-      <input type="submit" value="Submit" id="buttonS" />
-      <br />
-      <br />
+      <!-- Chapters Page -->
 
-      <hr width="100%" size="9" color="#f2f2f2" />
+      <div id="chapters" class="tabContent">
+        <h3>Create A New Chapter Summary</h3>
 
-      <h3>Chapter Summaries</h3>
+        <label for="chapter">Chapter Title:</label>
+        <br />
+        <input
+          type="text"
+          name="chapter"
+          id="chapter"
+          placeholder="Chapter Title"
+        />
+        <br />
 
-      Add storage area here
-    </div>
+        <label for="summary">Summary:</label>
+        <br />
+        <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
 
-    <!-- Notes Page -->
-    <div id="notes" class="tabContent">
-      <h3>Create A New Note</h3>
+        <input type="submit" value="Submit" id="buttonS" />
+        <br />
+        <br />
 
-      <label for="name">Chapter Title:</label>
-      <br />
-      <input
-        type="text"
-        name="chapterTitle"
-        id="chapterTitle"
-        placeholder="Chapter Title"
-      />
-      <br />
+        <hr width="100%" size="9" color="#f2f2f2" />
 
-      <label for="name">Summary:</label>
-      <br />
-      <textarea name="bio" id="bio2" cols="40" rows="15"></textarea>
+        <h3>Chapter Summaries</h3>
 
-      <input type="submit" value="Submit" id="buttonS" />
-      <br />
-      <br />
+        <table id="chapterTable">
+          <tr>
+            <th>Chapter Title</th>
+            <th>Summary</th>
+          </tr>
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.chapter}</td><td>${prompt.summary}</td></tr>`;
+            })
+            .join("")}
+        </table>
+      </div>
 
-      <hr width="100%" size="9" color="#f2f2f2" />
+      <!-- Notes Page -->
 
-      <h3>Notes</h3>
-      <!-- Add storage area here -->
-    </div>
+      <div id="notes" class="tabContent">
+        <h3>Create A New Note</h3>
+
+        <label for="noteTitle">Note Title:</label>
+        <br />
+        <input
+          type="text"
+          name="noteTitle"
+          id="noteTitle"
+          placeholder="Note Title"
+        />
+        <br />
+
+        <label for="note">Note:</label>
+        <br />
+        <textarea name="note" id="note" cols="40" rows="15"></textarea>
+
+        <input type="submit" value="Submit" id="buttonS" />
+        <br />
+        <br />
+
+        <hr width="100%" size="9" color="#f2f2f2" />
+
+        <h3>Notes</h3>
+        <table id="chapterTable">
+          <tr>
+            <th>Note Title</th>
+            <th>Note</th>
+          </tr>
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.noteTitle}</td><td>${prompt.note}</td></tr>`;
+            })
+            .join("")}
+        </table>
+      </div>
+    </form>
   </div>
 `;
