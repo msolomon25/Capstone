@@ -27,7 +27,7 @@ function afterRender(state) {
       // Get the form element
       const inputList = event.target.elements;
       console.log("Input Element List", inputList);
-
+      console.log(inputList.chapter);
       // Create a request body object to send to the API
       const requestData = {
         name: inputList.name.value,
@@ -53,7 +53,7 @@ function afterRender(state) {
         .post(`${process.env.STORY_API}/prompt`, requestData)
         .then(response => {
           //  Then push the new pizza onto the Pizza state pizzas attribute, so it can be displayed in the pizza list
-          store.Story.stories.push(response.data);
+          store.Story.prompts.push(response.data);
           router.navigate("/Story");
         })
         // If there is an error log it to the console

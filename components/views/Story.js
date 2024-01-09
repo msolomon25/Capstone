@@ -25,11 +25,13 @@ export default state => html`
       </button>
     </div>
 
+    <form id="characterForm" method="POST" action="">
+
     <!-- Character Page -->
     <div id="characters" class="tabContent">
       <h3>Character Profiles</h3>
 
-      <form id="characterForm" method="POST" action="">
+
         <label for="name">Name:</label>
         <br />
         <input type="text" name="name" id="name" placeholder="Full Name" />
@@ -97,7 +99,9 @@ export default state => html`
         <input type="submit" value="Submit" id="buttonS" />
 
         <hr width="100%" size="9" color="#f2f2f2" />
-      </form>
+      <!-- </form> -->
+
+      <h3>Characters</h3>
 
       <table id="characterTable">
         <tr>
@@ -109,7 +113,7 @@ export default state => html`
         </tr>
         ${state.prompts
           .map(prompt => {
-            return `<tr><td>${prompt.character}</td><td>${prompt.age}</td><td>${prompt.gender}</td><td>${prompt.species}</td>
+            return `<tr><td>${prompt.name}</td><td>${prompt.age}</td><td>${prompt.gender}</td><td>${prompt.species}</td>
             <td>${prompt.nationality}</td></tr>`;
           })
           .join("")}
@@ -117,60 +121,88 @@ export default state => html`
     </div>
 
     <!-- Chapters Page -->
-    <div id="chapters" class="tabContent">
-      <h3>Create A New Chapter Summary</h3>
+    <!-- <form id="chaptersForm" method="POST" action=""> -->
+      <div id="chapters" class="tabContent">
+        <h3>Create A New Chapter Summary</h3>
 
-      <label for="chapter">Chapter Title:</label>
-      <br />
-      <input
-        type="text"
-        name="chapter"
-        id="chapter"
-        placeholder="Chapter Title"
-      />
-      <br />
+        <label for="chapter">Chapter Title:</label>
+        <br />
+        <input
+          type="text"
+          name="chapter"
+          id="chapter"
+          placeholder="Chapter Title"
+        />
+        <br />
 
-      <label for="summary">Summary:</label>
-      <br />
-      <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
+        <label for="summary">Summary:</label>
+        <br />
+        <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
 
-      <input type="submit" value="Submit" id="buttonS" />
-      <br />
-      <br />
+        <input type="submit" value="Submit" id="buttonS" />
+        <br />
+        <br />
 
-      <hr width="100%" size="9" color="#f2f2f2" />
+        <hr width="100%" size="9" color="#f2f2f2" />
 
-      <h3>Chapter Summaries</h3>
+        <h3>Chapter Summaries</h3>
 
-      Add storage area here
-    </div>
+        <table id="chapterTable">
+        <tr>
+          <th>Chapter Title</th>
+          <th>Summary</th>
+
+        </tr>
+        ${state.prompts
+          .map(prompt => {
+            return `<tr><td>${prompt.chapter}</td><td>${prompt.summary}</td></tr>`;
+          })
+          .join("")}
+      </table>
+
+      </div>
+    <!-- </form> -->
 
     <!-- Notes Page -->
-    <div id="notes" class="tabContent">
-      <h3>Create A New Note</h3>
+    <!-- <form id="notesForm" method="POST" action=""> -->
+      <div id="notes" class="tabContent">
+        <h3>Create A New Note</h3>
 
-      <label for="noteTitle">Note Title:</label>
-      <br />
-      <input
-        type="text"
-        name="noteTitle"
-        id="noteTitle"
-        placeholder="Note Title"
-      />
-      <br />
+        <label for="noteTitle">Note Title:</label>
+        <br />
+        <input
+          type="text"
+          name="noteTitle"
+          id="noteTitle"
+          placeholder="Note Title"
+        />
+        <br />
 
-      <label for="note">Note:</label>
-      <br />
-      <textarea name="note" id="note" cols="40" rows="15"></textarea>
+        <label for="note">Note:</label>
+        <br />
+        <textarea name="note" id="note" cols="40" rows="15"></textarea>
 
-      <input type="submit" value="Submit" id="buttonS" />
-      <br />
-      <br />
+        <input type="submit" value="Submit" id="buttonS" />
+        <br />
+        <br />
 
-      <hr width="100%" size="9" color="#f2f2f2" />
+        <hr width="100%" size="9" color="#f2f2f2" />
 
-      <h3>Notes</h3>
-      <!-- Add storage area here -->
-    </div>
+        <h3>Notes</h3>
+        <table id="chapterTable">
+        <tr>
+          <th>Note Title</th>
+          <th>Note</th>
+
+        </tr>
+        ${state.prompts
+          .map(prompt => {
+            return `<tr><td>${prompt.noteTitle}</td><td>${prompt.note}</td></tr>`;
+          })
+          .join("")}
+      </table>
+
+      </div>
+    </form>
   </div>
 `;
