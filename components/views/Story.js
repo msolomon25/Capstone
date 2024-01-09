@@ -26,11 +26,9 @@ export default state => html`
     </div>
 
     <form id="characterForm" method="POST" action="">
-
-    <!-- Character Page -->
-    <div id="characters" class="tabContent">
-      <h3>Character Profiles</h3>
-
+      <!-- Character Page -->
+      <div id="characters" class="tabContent">
+        <h3>Character Profiles</h3>
 
         <label for="name">Name:</label>
         <br />
@@ -99,29 +97,39 @@ export default state => html`
         <input type="submit" value="Submit" id="buttonS" />
 
         <hr width="100%" size="9" color="#f2f2f2" />
-      <!-- </form> -->
+        <!-- </form> -->
 
-      <h3>Characters</h3>
+        <h3>Characters</h3>
 
-      <table id="characterTable">
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th>Species</th>
-          <th>Nationality</th>
-        </tr>
-        ${state.prompts
-          .map(prompt => {
-            return `<tr><td>${prompt.name}</td><td>${prompt.age}</td><td>${prompt.gender}</td><td>${prompt.species}</td>
-            <td>${prompt.nationality}</td></tr>`;
-          })
-          .join("")}
-      </table>
-    </div>
+        <table id="characterTable">
+          <div class="tableScroll">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Species</th>
+              <th>Nationality</th>
+              <th>Occupation</th>
+              <th>Religion</th>
+              <th>Hair Color</th>
+              <th>Eye Color</th>
+              <th>Bio</th>
+            </tr>
 
-    <!-- Chapters Page -->
-    <!-- <form id="chaptersForm" method="POST" action=""> -->
+
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.name}</td><td>${prompt.age}</td><td>${prompt.gender}</td><td>${prompt.species}</td>
+            <td>${prompt.nationality}</td><td>${prompt.occupation}</td><td>${prompt.religion}</td><td>${prompt.hair}</td>
+            <td>${prompt.eye}</td><td>${prompt.bio}</td></tr>`;
+            })
+            .join("")}
+        </table>
+        </div>
+      </div>
+
+      <!-- Chapters Page -->
+
       <div id="chapters" class="tabContent">
         <h3>Create A New Chapter Summary</h3>
 
@@ -148,23 +156,20 @@ export default state => html`
         <h3>Chapter Summaries</h3>
 
         <table id="chapterTable">
-        <tr>
-          <th>Chapter Title</th>
-          <th>Summary</th>
-
-        </tr>
-        ${state.prompts
-          .map(prompt => {
-            return `<tr><td>${prompt.chapter}</td><td>${prompt.summary}</td></tr>`;
-          })
-          .join("")}
-      </table>
-
+          <tr>
+            <th>Chapter Title</th>
+            <th>Summary</th>
+          </tr>
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.chapter}</td><td>${prompt.summary}</td></tr>`;
+            })
+            .join("")}
+        </table>
       </div>
-    <!-- </form> -->
 
-    <!-- Notes Page -->
-    <!-- <form id="notesForm" method="POST" action=""> -->
+      <!-- Notes Page -->
+
       <div id="notes" class="tabContent">
         <h3>Create A New Note</h3>
 
@@ -190,18 +195,16 @@ export default state => html`
 
         <h3>Notes</h3>
         <table id="chapterTable">
-        <tr>
-          <th>Note Title</th>
-          <th>Note</th>
-
-        </tr>
-        ${state.prompts
-          .map(prompt => {
-            return `<tr><td>${prompt.noteTitle}</td><td>${prompt.note}</td></tr>`;
-          })
-          .join("")}
-      </table>
-
+          <tr>
+            <th>Note Title</th>
+            <th>Note</th>
+          </tr>
+          ${state.prompts
+            .map(prompt => {
+              return `<tr><td>${prompt.noteTitle}</td><td>${prompt.note}</td></tr>`;
+            })
+            .join("")}
+        </table>
       </div>
     </form>
   </div>
