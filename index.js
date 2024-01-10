@@ -115,28 +115,25 @@ router.hooks({
         ? capitalize(params.data.view)
         : "Home";
 
-    // Add a switch case statement to handle multiple routes
+    // Add a switch case statement to handle multiple routes start of weather
     switch (view) {
       case "Home":
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=chicago`
+            `https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${process.env.WORDNIK_API_KEY}`
           )
           .then(response => {
-            // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
-            const kelvinToFahrenheit = kelvinTemp =>
-              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-
             // Create an object to be stored in the Home state from the response
-            store.Home.weather = {
-              city: response.data.name,
-              temp: kelvinToFahrenheit(response.data.main.temp),
-              feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-              description: response.data.weather[0].main
+            store.Home.word = {
+              word: response.data.word,
+              note: response.data.note,
+              text: response.data.text
             };
 
             done();
           })
+
+          //end of weather
           .catch(err => {
             console.log(err);
             done();
