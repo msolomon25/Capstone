@@ -94,28 +94,28 @@ export default state => html`
         <br />
         <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" id="buttonS" />
+        <input type="submit" value="Submit" class="buttonS" />
 
         <hr width="100%" size="9" color="#f2f2f2" />
-        <!-- </form> -->
 
         <h3>Characters</h3>
 
-        <table id="characterTable">
-          <div class="tableScroll">
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Species</th>
-              <th>Nationality</th>
-              <th>Occupation</th>
-              <th>Religion</th>
-              <th>Hair Color</th>
-              <th>Eye Color</th>
-              <th>Bio</th>
-            </tr>
+        <div class="tableScroll">
 
+        <table id="characterTable">
+
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Species</th>
+            <th>Nationality</th>
+            <th>Occupation</th>
+            <th>Religion</th>
+            <th>Hair-Color</th>
+            <th>Eye-Color</th>
+            <th>Bio</th>
+          </tr>
 
           ${state.prompts
             .map(prompt => {
@@ -125,7 +125,9 @@ export default state => html`
             })
             .join("")}
         </table>
+
         </div>
+
       </div>
 
       <!-- Chapters Page -->
@@ -147,13 +149,15 @@ export default state => html`
         <br />
         <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" id="buttonS" />
+        <input type="submit" value="Submit" class="buttonS" />
         <br />
         <br />
 
         <hr width="100%" size="9" color="#f2f2f2" />
 
         <h3>Chapter Summaries</h3>
+
+        <div class="tableScroll">
 
         <table id="chapterTable">
           <tr>
@@ -166,6 +170,7 @@ export default state => html`
             })
             .join("")}
         </table>
+          </div>
       </div>
 
       <!-- Notes Page -->
@@ -187,13 +192,15 @@ export default state => html`
         <br />
         <textarea name="note" id="note" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" id="buttonS" />
+        <input type="submit" value="Submit" class="buttonS" />
         <br />
         <br />
 
         <hr width="100%" size="9" color="#f2f2f2" />
 
         <h3>Notes</h3>
+
+        <div class="tableScroll">
         <table id="chapterTable">
           <tr>
             <th>Note Title</th>
@@ -205,6 +212,7 @@ export default state => html`
             })
             .join("")}
         </table>
+          </div>
       </div>
     </form>
   </div>

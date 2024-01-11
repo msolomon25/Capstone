@@ -60,5 +60,4 @@ app.get("/status", (request, response) => {
 // Tell the Express app to start listening
 // Let the humans know I am running and listening on 4040
 app.use("/prompt", prompt);
-// app.use("/stories", stories);
 app.listen(4040, () => console.log("Listening on port 4040"));

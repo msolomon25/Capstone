@@ -115,7 +115,7 @@ router.hooks({
         ? capitalize(params.data.view)
         : "Home";
 
-    // Add a switch case statement to handle multiple routes start of weather
+    // Add a switch case statement to handle multiple routes
     switch (view) {
       case "Home":
         axios
@@ -134,7 +134,7 @@ router.hooks({
             done();
           })
 
-          //end of weather
+
           .catch(err => {
             console.log(err);
             done();
@@ -163,25 +163,3 @@ router
     }
   })
   .resolve();
-
-// Not working
-// function toggleMenu() {
-//   var nav = document.getElementsByClassName("hamburgerMenu");
-//   if (nav.style.display === "block") {
-//     nav.style.display = "none";
-//   } else {
-//     nav.style.display = "block";
-//   }
-// }
-
-// const hamburgerMenu = document.querySelector(".hamburgerMenu");
-// const navMenu = document.querySelector(".hiddenMobile");
-
-// hamburgerMenu.addEventListener("click", mobileMenu);
-
-// function mobileMenu() {
-//     hamburgerMenu.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// }
-
-// https://zenquotes.io/api/today
