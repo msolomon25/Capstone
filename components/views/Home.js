@@ -50,8 +50,13 @@ export default state => html`
 
       <h3 class="h3Padded">Today's Word of the Day</h3>
 
+      <h3 id="dailyWord">${state.dailyWord.word}</h3>
+
       <p>
-        ${state.dailyWord.word} ${state.dailyWord.note}.
+        ${state.dailyWord.note}.
+      </p>
+
+      <p>
         ${state.dailyWord.text}.
       </p>
     </div>

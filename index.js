@@ -124,11 +124,12 @@ router.hooks({
           )
           .then(response => {
             // Create an object to be stored in the Home state from the response
-            store.Home.word = {
+            store.Home.dailyWord = {
               word: response.data.word,
               note: response.data.note,
-              text: response.data.text
+              text: response.data.definitions
             };
+            console.log(response.data);
 
             done();
           })
