@@ -20,6 +20,21 @@ export default state => html`
 
   <div class="centeredContent">
     <div class="centered">
+
+    <div class="blackDiv">
+        <h3 class="whiteBold">Today's Word of the Day</h3>
+
+        <h1 id="dailyWord">${state.dailyWord.word}</h1>
+
+        <p class="whiteBC">
+          ${state.dailyWord.note}.
+</p>
+
+        <p class="whiteBC">
+          ${state.dailyWord.text[0]}.
+        </p>
+      </div>
+
       <h3 class="h3Padded">Plan your story</h3>
 
       <p>
@@ -48,17 +63,7 @@ export default state => html`
         Make sure to check out our resource page!
       </p>
 
-      <h3 class="h3Padded">Today's Word of the Day</h3>
 
-      <h3 id="dailyWord">${state.dailyWord.word}</h3>
-
-      <p>
-        ${state.dailyWord.note}.
-      </p>
-
-      <p>
-        ${state.dailyWord.text}.
-      </p>
     </div>
   </div>
 `;

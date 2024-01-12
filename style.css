@@ -12,6 +12,11 @@
   padding-left: 0px;
 }
 
+.whiteBold{
+  color: var(--white);
+  padding-left: 0px;
+}
+
 #welcomeSH{
   color: var(--dark-tone);
   padding-right: 5%;
@@ -19,12 +24,20 @@
 
 }
 
+#dailyWord{
+  font-family: 'Archivo Black', sans-serif;
+  color: var(--highlight-color);
+}
+
+.whiteBC{
+  color: var(--white);
+}
 
 
 h1{
   color: var(--white);
   font-family: 'Archivo Black', sans-serif;
-  padding-left: 60px;
+  /* padding-left: 60px; */
 
 
 }
@@ -69,6 +82,10 @@ p{
   padding-left: 15%;
   padding-right: 15%;
 
+}
+
+.blackDiv{
+  background-color: var(--dark-tone);
 }
 
 /* ============================================================================================= */
@@ -288,6 +305,11 @@ footer{
   padding-left: 60px;
   max-width: 400px;
   min-width: 150px;
+
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 

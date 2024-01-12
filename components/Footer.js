@@ -2,8 +2,9 @@ import html from "html-literal";
 
 import FooterLogo from "../assets/img/WInkLg.svg";
 
-export default () => html`
+export default state => html`
   <footer>
+
     <img
       src=${FooterLogo}
       alt="InkWizard Logo"
@@ -12,3 +13,4 @@ export default () => html`
     />
   </footer>
 `;
+
