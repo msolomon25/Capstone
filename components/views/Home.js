@@ -2,7 +2,7 @@ import html from "html-literal";
 import welcomeImage from "../../assets/img/WelToIw.svg";
 import planImage from "../../assets/img/planImg.jpg";
 
-export default (state) => html`
+export default state => html`
   <div class="headerGrid">
     <div id="lrgHeader"></div>
 
@@ -15,11 +15,34 @@ export default (state) => html`
       />
 
       <h2 id="welcomeSH">We help you bring your stories to life!</h2>
+
+      <a id="callToAction">Get Started</a>
     </div>
   </div>
 
   <div class="centeredContent">
     <div class="centered">
+
+    <div class="blackDiv">
+        <h3 class="whiteBold">Word of the Day</h3>
+
+        <h1 id="dailyWord">${state.dailyWord.word}</h1>
+
+        <p class="whiteBC">
+          ${state.dailyWord.note}
+</p>
+
+<br />
+      <hr width="50%" size="9" color="#2AD9E6" />
+      <br />
+
+<h3 class="whiteBoldTwo">Definitions</h3>
+
+        <p class="whiteBC">
+          ${state.dailyWord.text[0].text}
+        </p>
+      </div>
+
       <h3 class="h3Padded">Plan your story</h3>
 
       <p>
@@ -27,9 +50,12 @@ export default (state) => html`
         important information!
       </p>
 
-
-      <img src=${planImage} alt="Planning Image" style="width:40%" style="height: 15%;">
-
+      <img
+        src=${planImage}
+        alt="Planning Image"
+        style="width:40%"
+        style="height: 15%;"
+      />
 
       <h3 class="h3Padded">Create dynamic characters</h3>
 
@@ -45,20 +71,7 @@ export default (state) => html`
         Make sure to check out our resource page!
       </p>
 
-      <h3 class="h3Padded">Writing Prompt Generator</h3>
-      <p>Having trouble with writer's block? Click the button below to get a one sentence writing prompt!
-      </p>
-      <button class="button" type="button">Click Me!</button>
-
-      <h3 class="h3Padded">Today's weather</h3>
-
-      <p>
-    The weather in ${state.weather.city} is ${state.weather.description}. Temperature is ${state.weather.temp}F, and it feels like ${state.weather.feelsLike}F.
-  </p>
-
 
     </div>
   </div>
-
-
 `;

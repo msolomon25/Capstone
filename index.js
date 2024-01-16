@@ -19,10 +19,22 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
+
+  if (state.view === "Home") {
+    // Do this stuff
+    document.getElementById("callToAction").addEventListener("click", event => {
+      event.preventDefault();
+
+      router.navigate("/story");
+    });
+  }
+
   if (state.view === "Story") {
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
+
+
 
       // Get the form element
       const inputList = event.target.elements;
@@ -120,23 +132,21 @@ router.hooks({
       case "Home":
         axios
           .get(
-            `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.OPEN_WEATHER_MAP_API_KEY}&q=chicago`
+            `https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${process.env.WORDNIK_API_KEY}`
           )
           .then(response => {
-            // Convert Kelvin to Fahrenheit since OpenWeatherMap does provide otherwise
-            const kelvinToFahrenheit = kelvinTemp =>
-              Math.round((kelvinTemp - 273.15) * (9 / 5) + 32);
-
             // Create an object to be stored in the Home state from the response
-            store.Home.weather = {
-              city: response.data.name,
-              temp: kelvinToFahrenheit(response.data.main.temp),
-              feelsLike: kelvinToFahrenheit(response.data.main.feels_like),
-              description: response.data.weather[0].main
+            store.Home.dailyWord = {
+              word: response.data.word,
+              note: response.data.note,
+              text: response.data.definitions
             };
+            console.log(response.data);
 
             done();
           })
+
+
           .catch(err => {
             console.log(err);
             done();
@@ -165,25 +175,3 @@ router
     }
   })
   .resolve();
-
-// Not working
-// function toggleMenu() {
-//   var nav = document.getElementsByClassName("hamburgerMenu");
-//   if (nav.style.display === "block") {
-//     nav.style.display = "none";
-//   } else {
-//     nav.style.display = "block";
-//   }
-// }
-
-// const hamburgerMenu = document.querySelector(".hamburgerMenu");
-// const navMenu = document.querySelector(".hiddenMobile");
-
-// hamburgerMenu.addEventListener("click", mobileMenu);
-
-// function mobileMenu() {
-//     hamburgerMenu.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// }
-
-// https://zenquotes.io/api/today

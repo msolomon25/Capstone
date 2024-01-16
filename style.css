@@ -12,6 +12,19 @@
   padding-left: 0px;
 }
 
+.whiteBold{
+  color: var(--dark-tone);
+  padding-left: 0px;
+  background-color: #2AD9E6;
+  padding-bottom: 20px;
+}
+
+.whiteBoldTwo{
+  padding-top: 0;
+  color: var(--highlight-color);
+  padding-left: 0px;
+}
+
 #welcomeSH{
   color: var(--dark-tone);
   padding-right: 5%;
@@ -19,12 +32,20 @@
 
 }
 
+#dailyWord{
+  font-family: 'Archivo Black', sans-serif;
+  color: var(--highlight-color);
+}
+
+.whiteBC{
+  color: var(--white);
+}
 
 
 h1{
   color: var(--white);
   font-family: 'Archivo Black', sans-serif;
-  padding-left: 60px;
+  /* padding-left: 60px; */
 
 
 }
@@ -70,6 +91,38 @@ p{
   padding-right: 15%;
 
 }
+
+.blackDiv{
+  background-color: var(--dark-tone);
+  padding-bottom: 3em;
+}
+
+#callToAction{
+  display: grid;
+  text-decoration: none;
+  color: var(--dark-tone);
+  background-color: var(--white);
+  font-size: 1.2em;
+  padding: 1rem;
+  position: static;
+  top: 80%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  max-width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#callToAction:hover {
+  background-color: var(--dark-tone);
+  color: var(--highlight-color);
+}
+
+
 
 /* ============================================================================================= */
 
@@ -288,6 +341,11 @@ footer{
   padding-left: 60px;
   max-width: 400px;
   min-width: 150px;
+
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -303,30 +361,53 @@ footer{
 
 div.tableScroll{
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-   margin: 50%, 50%;
-  padding: 4px;
   background-color: var(--light-tone);
-  width: 75%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
+    border: 1px solid var(--dark-blue);
+    border-radius: 4px 0 4px 0;
+    color: #3B3C3E;
+    font-size: 12px;
+    font-weight: bold;
+    left: -1px;
+    padding: 10px 7px 5px;
+
+    max-width: 600px;
+    max-height: 600px;
+    overflow:scroll;
+    overflow-y:scroll;
 }
 
 td{
-  width: 25%;
+  max-width: 100px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  flex: 0 0 auto;
+  padding-left: 30px;
+padding-right: 30px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+tr{
+  max-width: 100px;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
   flex: 0 0 auto;
 }
 
 th{
-color: var(--highlight-color);
-width: 25%;
+color: var(--white);
+max-width: 100px;
 font-family: Arial, Helvetica, sans-serif;
+text-align: left;
+flex: 0 0 auto;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 10px;
+padding-bottom: 10px;
+background-color: var(--highlight-color);
 
 }
+
 
 #storyPgGrid{
   display: grid;
@@ -389,12 +470,12 @@ background-color: inherit;
 }
 
 .storySidebar button:hover{
-  background-color: var(--dark-blue);
-  color: var(--white);
+  background-color: var(--dark-tone);
+  color: var(--highlight-color);
 }
 
 .storySidebar button.active{
-  background-color: var(--dark-blue);
+  background-color: var(--dark-tone);
   color: var(--white)
 }
 
@@ -427,31 +508,111 @@ label {
 }
 
 
+/* .chInfo{
+  width: 60vw;
+} */
+
 
 
 input[type=text], select, textarea {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   border: 1px solid var(--highlight-color);
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  margin-left: auto;
+  margin-right: auto;
+
 
 }
+#summary{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+#note{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+#fName{
+  width: 60vw;
+}
+
+#chapter{
+  width: 60vw;
+}
+
+#noteTitle{
+  width: 60vw;
+}
+
+
+#name{
+  width: 60vw;
+}
+
+#age{
+  width: 60vw;
+}
+
+#gender{
+  width: 60vw;
+}
+
+#species{
+  width: 60vw;
+}
+#nationality{
+  width: 60vw;
+}
+
+#occupation{
+  width: 60vw;
+}
+
+#religion{
+  width: 60vw;
+}
+
+#hair{
+  width: 60vw;
+}
+
+#eye{
+  width: 60vw;
+}
+
+#phone{
+  width: 60vw;
+}
+
+#buttonS{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 input[type=tel], select, textarea {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   border: 1px solid var(--highlight-color);
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical
+  resize: vertical;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input[type=email], select, textarea {
-  width: 50%;
+  width: 60vw;
   padding: 12px;
   border: 1px solid var(--highlight-color);
   box-sizing: border-box;
@@ -465,11 +626,12 @@ input[type=submit] {
   border: 1px solid var(--highlight-color);
 
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   display: block;
   color: var(--dark-tone);
   background-color: var(--light-tone);
+
 
 }
 
@@ -478,6 +640,56 @@ input[type=submit]:hover {
   color: var(--white);
   border: 1px solid var(--dark-tone);
 }
+
+
+#fs-frm-inputs{
+  background-color: var(--dark-tone);
+  max-width: 25%;
+border: none;
+
+margin-left: auto;
+margin-right: auto;
+
+}
+
+.blueDiv{
+background-color: var(--highlight-color);
+
+}
+
+.fFields{
+background-color: var(--dark-tone);
+font-family: Arial, Helvetica, sans-serif;
+color: var(--highlight-color);
+margin-left: 15px;
+margin-right: 15px;
+}
+
+.fHeadings{
+  color: var(--highlight-color);
+
+}
+
+.fa-brands{
+  color: var(--highlight-color);
+  width: 4vw;
+font-size: 200%;
+text-decoration: none;
+}
+
+.centeredBlack{
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background-color: var(--dark-tone);
+  padding-bottom: 70px;
+  /* padding-top: 50px; */
+  width: 75vw;
+  /* position: ; */
+  text-align: center;
+
+  margin: auto;
+}
+
 
 
 
@@ -490,7 +702,8 @@ text-align: center;
 
 #contactMe{
   text-align: center;
-  padding: 0%;
+  padding: 1%;
+  color: var(--dark-tone);
 }
 
 /* a:hover {
@@ -501,7 +714,7 @@ text-align: center;
 
 
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
 
 
   /* nav > .fa-bars {
@@ -531,11 +744,15 @@ text-align: center;
 }
 
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:750px){
 
   /* pizza  */
   .hidden--mobile {
     display: none !important;
+  }
+
+  #callToAction{
+    display: none;
   }
 
   nav {

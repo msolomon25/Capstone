@@ -1,80 +1,98 @@
 import html from "html-literal";
 
 export default () => html`
-<div class = "headerGrid">
+  <div class="headerGrid">
+    <div id="smallHeader"></div>
+  </div>
 
-<div id = "smallHeader"> </div>
+  <div class="centeredContent">
+    <div class="centeredBlack">
+      <div class="contactForm">
+        <form
+          id="fs-frm"
+          name="simple-contact-form"
+          accept-charset="utf-8"
+          action="https://formspree.io/f/mnqkeozk"
+          method="post"
+        >
+          <fieldset id="fs-frm-inputs">
+            <div class="blueDiv">
+              <h3 id="contactMe">Contact Me</h3>
+            </div>
 
+            <br />
+            <br />
 
-</div>
+            <label for="full-name" class="fHeadings">Full Name</label>
 
-<div class="centeredContent">
+            <br />
+            <br />
+            <input
+              type="text"
+              name="name"
+              id="fName"
+              class="fFields"
+              placeholder="First and Last"
+              required=""
+            />
 
-<div class="centered">
+            <br />
+            <br />
+            <br />
 
-  <h3 id="contactMe">Contact Me</h3>
+            <label for="email-address" class="fHeadings">Email Address</label>
+            <br />
+            <br />
+            <input
+              type="email"
+              class="fFields"
+              name="_replyto"
+              id="email-address"
+              placeholder="email@domain.tld"
+              required=""
+            />
 
-  <div class="contactForm">
+            <br />
+            <br />
+            <br />
 
-    <form action="https://formspree.io/f/mnqkeozk" method="POST">
+            <label for="message" class="fHeadings">Message</label>
 
+            <br />
+            <br />
 
+            <textarea
+              rows="5"
+              name="message"
+              class="fFields"
+              id="message"
+              placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus."
+              required=""
+            ></textarea>
+            <input
+              type="hidden"
+              name="_subject"
+              id="email-subject"
+              value="Contact Form Submission"
+            />
 
-      <label for="name">Name:</label>
-      <br>
-      <input type="text" name="name" id="name" placeholder="Full Name" />
-      <br>
-      <br>
+            <br />
+            <br />
 
-      <label for="email">Email:</label>
-      <br>
-      <input type="email" name="email" id="email" placeholder="you@somewhere.com" />
-      <br>
-      <br>
+            <input type="submit" id="buttonS" value="Submit" />
+            <br />
+            <br />
+          </fieldset>
+        </form>
 
-      <label for="phone">Phone:</label>
-      <br>
-      <input type="tel" name="phone" id="phone" placeholder="555-555-5555" />
-      <br>
-      <br>
+        <a
+          href="https://www.linkedin.com/in/madori-solomon-aba4a3186/"
+          class="fa-brands fa-linkedin"
+        ></a>
+        <a href="https://github.com/msolomon25" class="fa-brands fa-github"></a>
 
-        <label for="msg">Subject:</label>
-        <br>
-        <textarea name="message" id="msg" cols="30" rows="10"></textarea>
-
-
-      <br>
-
-      <div>
-        <h5>What's this message about?</h5>
-        <div>
-          <input
-            type="radio"
-            name="subject"
-            value="professional"
-            id="pro"
-            checked
-          />
-          <label for="pro">I'd like to hire you!</label>
-        </div>
-        <div>
-          <input type="radio" name="subject" value="personal" id="personal" />
-          <label for="personal">Personal message</label>
-        </div>
-        <div>
-          <input type="radio" name="subject" value="other" />
-          <label>Don't know/something else</label>
-        </div>
+        <!-- Include links to socials and a photo of myself -->
       </div>
-
-
+    </div>
   </div>
-  <br>
-
-
-      <input type="submit" value="Submit" id = "buttonS" />
-    </form>
-
-    <!-- Include links to socials and a photo of myself -->
-  </div>
-</div>`
+`;
