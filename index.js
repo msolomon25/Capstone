@@ -19,10 +19,22 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
+
+  if (state.view === "Home") {
+    // Do this stuff
+    document.getElementById("callToAction").addEventListener("click", event => {
+      event.preventDefault();
+
+      router.navigate("/story");
+    });
+  }
+
   if (state.view === "Story") {
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
+
+
 
       // Get the form element
       const inputList = event.target.elements;

@@ -32,28 +32,29 @@ export default state => html`
 
         <label for="name">Name:</label>
         <br />
-        <input type="text" name="name" id="name" placeholder="Full Name" />
+        <input type="text" name="name" id="name" class="chInfo" placeholder="Full Name" />
         <br />
 
         <label for="age">Age:</label>
         <br />
-        <input type="text" name="age" id="age" placeholder="Age" />
+        <input type="text" name="age" id="age" class="chInfo" placeholder="Age" />
         <br />
 
         <label for="gender">Gender:</label>
         <br />
-        <input type="text" name="gender" id="gender" placeholder="Gender" />
+        <input type="text" name="gender" id="gender" class="chInfo" placeholder="Gender" />
         <br />
 
         <label for="species">Species:</label>
         <br />
-        <input type="text" name="species" id="species" placeholder="Species" />
+        <input type="text" name="species" id="species" class="chInfo" placeholder="Species" />
         <br />
 
         <label for="nationality">Nationality:</label>
         <br />
         <input
           type="text"
+          class="chInfo"
           name="nationality"
           id="nationality"
           placeholder="Nationality"
@@ -67,6 +68,7 @@ export default state => html`
           name="occupation"
           id="occupation"
           placeholder="Occupation"
+          class="chInfo"
         />
         <br />
 
@@ -77,24 +79,25 @@ export default state => html`
           name="religion"
           id="religion"
           placeholder="Religion"
+          class="chInfo"
         />
         <br />
 
         <label for="hair">Hair Color:</label>
         <br />
-        <input type="text" name="hair" id="hair" placeholder="Hair Color" />
+        <input type="text" name="hair" id="hair" placeholder="Hair Color" class="chInfo" />
         <br />
 
         <label for="eye">Eye Color:</label>
         <br />
-        <input type="text" name="eye" id="eye" placeholder="Eye Color" />
+        <input type="text" name="eye" id="eye" placeholder="Eye Color" class="chInfo" />
         <br />
 
         <label for="bio">Bio</label>
         <br />
         <textarea name="bio" id="bio" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" class="buttonS" />
+        <input type="submit" value="Submit" class="buttonL" />
 
         <hr width="100%" size="9" color="#f2f2f2" />
 
@@ -149,7 +152,7 @@ export default state => html`
         <br />
         <textarea name="summary" id="summary" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" class="buttonS" />
+        <input type="submit" value="Submit" class="buttonL" />
         <br />
         <br />
 
@@ -192,7 +195,7 @@ export default state => html`
         <br />
         <textarea name="note" id="note" cols="40" rows="15"></textarea>
 
-        <input type="submit" value="Submit" class="buttonS" />
+        <input type="submit" value="Submit" class="buttonL" />
         <br />
         <br />
 

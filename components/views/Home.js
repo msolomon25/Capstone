@@ -15,6 +15,8 @@ export default state => html`
       />
 
       <h2 id="welcomeSH">We help you bring your stories to life!</h2>
+
+      <a id="callToAction">Get Started</a>
     </div>
   </div>
 
@@ -22,16 +24,22 @@ export default state => html`
     <div class="centered">
 
     <div class="blackDiv">
-        <h3 class="whiteBold">Today's Word of the Day</h3>
+        <h3 class="whiteBold">Word of the Day</h3>
 
         <h1 id="dailyWord">${state.dailyWord.word}</h1>
 
         <p class="whiteBC">
-          ${state.dailyWord.note}.
+          ${state.dailyWord.note}
 </p>
 
+<br />
+      <hr width="50%" size="9" color="#2AD9E6" />
+      <br />
+
+<h3 class="whiteBoldTwo">Definitions</h3>
+
         <p class="whiteBC">
-          ${state.dailyWord.text[0]}.
+          ${state.dailyWord.text[0].text}
         </p>
       </div>
 

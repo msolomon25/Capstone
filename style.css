@@ -13,7 +13,15 @@
 }
 
 .whiteBold{
-  color: var(--white);
+  color: var(--dark-tone);
+  padding-left: 0px;
+  background-color: #2AD9E6;
+  padding-bottom: 20px;
+}
+
+.whiteBoldTwo{
+  padding-top: 0;
+  color: var(--highlight-color);
   padding-left: 0px;
 }
 
@@ -86,7 +94,35 @@ p{
 
 .blackDiv{
   background-color: var(--dark-tone);
+  padding-bottom: 3em;
 }
+
+#callToAction{
+  display: grid;
+  text-decoration: none;
+  color: var(--dark-tone);
+  background-color: var(--white);
+  font-size: 1.2em;
+  padding: 1rem;
+  position: static;
+  top: 80%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  max-width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#callToAction:hover {
+  background-color: var(--dark-tone);
+  color: var(--highlight-color);
+}
+
+
 
 /* ============================================================================================= */
 
@@ -372,6 +408,7 @@ background-color: var(--highlight-color);
 
 }
 
+
 #storyPgGrid{
   display: grid;
   grid-template-columns: 25vw 1fr 1fr 1fr 1fr;
@@ -471,18 +508,87 @@ label {
 }
 
 
+/* .chInfo{
+  width: 60vw;
+} */
+
 
 
 input[type=text], select, textarea {
-  width: 50%;
+  width: 100%;
   padding: 12px;
   border: 1px solid var(--highlight-color);
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  margin-left: auto;
+  margin-right: auto;
+
 
 }
+#summary{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+#note{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60vw;
+  box-sizing: border-box;
+}
+
+#fName{
+  width: 60vw;
+}
+
+#chapter{
+  width: 60vw;
+}
+
+#noteTitle{
+  width: 60vw;
+}
+
+
+#name{
+  width: 60vw;
+}
+
+#age{
+  width: 60vw;
+}
+
+#gender{
+  width: 60vw;
+}
+
+#species{
+  width: 60vw;
+}
+#nationality{
+  width: 60vw;
+}
+
+#occupation{
+  width: 60vw;
+}
+
+#religion{
+  width: 60vw;
+}
+
+#hair{
+  width: 60vw;
+}
+
+#eye{
+  width: 60vw;
+}
+
 
 input[type=tel], select, textarea {
   width: 50%;
@@ -495,7 +601,7 @@ input[type=tel], select, textarea {
 }
 
 input[type=email], select, textarea {
-  width: 50%;
+  width: 60vw;
   padding: 12px;
   border: 1px solid var(--highlight-color);
   box-sizing: border-box;
@@ -509,11 +615,12 @@ input[type=submit] {
   border: 1px solid var(--highlight-color);
 
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
   display: block;
   color: var(--dark-tone);
   background-color: var(--light-tone);
+
 
 }
 
@@ -522,6 +629,8 @@ input[type=submit]:hover {
   color: var(--white);
   border: 1px solid var(--dark-tone);
 }
+
+
 
 
 
@@ -545,7 +654,7 @@ text-align: center;
 
 
 
-@media (min-width: 650px) {
+@media (min-width: 750px) {
 
 
   /* nav > .fa-bars {
@@ -575,11 +684,15 @@ text-align: center;
 }
 
 
-@media only screen and (max-width:700px){
+@media only screen and (max-width:750px){
 
   /* pizza  */
   .hidden--mobile {
     display: none !important;
+  }
+
+  #callToAction{
+    display: none;
   }
 
   nav {

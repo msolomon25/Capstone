@@ -22,7 +22,7 @@ export default () => html`
 
       <label for="name">Name:</label>
       <br>
-      <input type="text" name="name" id="name" placeholder="Full Name" />
+      <input type="text" name="fName" id="fName" placeholder="Full Name" />
       <br>
       <br>
 
