@@ -22,21 +22,20 @@ export default state => html`
 
   <div class="centeredContent">
     <div class="centered">
-
-    <div class="blackDiv">
+      <div class="blackDiv">
         <h3 class="whiteBold">Word of the Day</h3>
 
         <h1 id="dailyWord">${state.dailyWord.word}</h1>
 
         <p class="whiteBC">
           ${state.dailyWord.note}
-</p>
+        </p>
 
-<br />
-      <hr width="50%" size="9" color="#2AD9E6" />
-      <br />
+        <br />
+        <hr width="50%" size="9" color="#2AD9E6" />
+        <br />
 
-<h3 class="whiteBoldTwo">Definitions</h3>
+        <h3 class="whiteBoldTwo">Definitions</h3>
 
         <p class="whiteBC">
           ${state.dailyWord.text[0].text}
@@ -50,12 +49,29 @@ export default state => html`
         important information!
       </p>
 
-      <img
+      <div class="container">
+        <div class="carousel-view">
+
+          <!-- List Container -->
+          <div id="item-list" class="item-list">
+            <!-- Items -->
+            <img id="item" class="item" src="https://images.pexels.com/photos/261763/pexels-photo-261763.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <img id="item" class="item" src="https://images.pexels.com/photos/372748/pexels-photo-372748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <img id="item" class="item" src="https://images.pexels.com/photos/831430/pexels-photo-831430.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </div>
+
+
+          <button id="prev-btn" class="prev-btn fa-regular fa-circle-left"></button>
+          <button id="next-btn" class="next-btn fa-regular fa-circle-right"></button>
+        </div>
+      </div>
+
+      <!-- <img
         src=${planImage}
         alt="Planning Image"
         style="width:40%"
         style="height: 15%;"
-      />
+      /> -->
 
       <h3 class="h3Padded">Create dynamic characters</h3>
 

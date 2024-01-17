@@ -20,6 +20,24 @@ function render(state = store.Home) {
 
 function afterRender(state) {
 
+  //carousel
+
+  const prev = document.getElementById("prev-btn");
+  const next = document.getElementById("next-btn");
+  const list = document.getElementById("item-list");
+  const itemWidth = 400;
+  const padding = 20;
+
+  prev.addEventListener("click", () => {
+    list.scrollLeft -= itemWidth + padding;
+  });
+  next.addEventListener("click", () => {
+    list.scrollLeft += itemWidth + padding;
+  });
+
+
+  // =======================================
+
   if (state.view === "Home") {
     // Do this stuff
     document.getElementById("callToAction").addEventListener("click", event => {
@@ -33,8 +51,6 @@ function afterRender(state) {
     // Add an event handler for the submit button on the form
     document.querySelector("form").addEventListener("submit", event => {
       event.preventDefault();
-
-
 
       // Get the form element
       const inputList = event.target.elements;
@@ -145,7 +161,6 @@ router.hooks({
 
             done();
           })
-
 
           .catch(err => {
             console.log(err);
