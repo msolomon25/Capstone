@@ -134,16 +134,102 @@ hr{
   color: var(--white);
 }
 
+/* photo carousel ===============================================================================*/
+
+.item-list{
+  max-width: 50vw;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  margin-left: auto;
+  margin-right: auto;
+
+  gap: 40px;
+}
+
+.item{
+  scroll-snap-align: center;
+  width: 30vw
+}
+
+#prev-btn{
+  border: none;
+  cursor: pointer;
+  color: var(--dark-tone);
+  background: none;
+  background-color: none;
+  transition: all .3s ease-in-out;
+  width: 4vw;
+font-size: 200%;
+padding-top: 15px;
+}
+
+#prev-btn:hover{
+
+  color: var(--highlight-color);
+  font-size: 220%;
+
+}
+
+#next-btn{
+  border: none;
+  cursor: pointer;
+  color: var(--dark-tone);
+  background: none;
+  background-color: none;
+  transition: all .3s ease-in-out;
+  width: 4vw;
+font-size: 200%;
+padding-top: 15px;
+}
+
+#next-btn:hover{
+
+  color: var(--highlight-color);
+  font-size: 220%;
+
+}
+
+
+.item-list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.item-list {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+
+
 /* Nav bar ===================================================================================== */
 
 .topNav {
   background-color: var(--dark-tone);
   overflow: hidden;
-  /* padding-top: 30px;
-  padding-bottom: 30px; */
 
 
 
+}
+
+nav{
+  background-color: var(--dark-tone);
+  overflow: hidden;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+  border-bottom: solid var(--dark-blue) 2px;
+}
+
+body{
+  padding-top: 95px;
 }
 
 /* .hMenu{
@@ -675,6 +761,13 @@ margin-right: 15px;
   width: 4vw;
 font-size: 200%;
 text-decoration: none;
+}
+
+.fa-brands:hover{
+  color: var(--white);
+
+font-size: 220%;
+
 }
 
 .centeredBlack{
