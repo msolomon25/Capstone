@@ -17,6 +17,7 @@ export default state => html`
       <h2 id="welcomeSH">We help you bring your stories to life!</h2>
 
       <a id="callToAction">Get Started</a>
+
     </div>
   </div>
 

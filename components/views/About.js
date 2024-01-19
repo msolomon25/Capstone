@@ -26,6 +26,12 @@ much smoother. InkWizard was my solution.
       <img src=${booksImg} alt="Story Image" style="width:60%" style="height: 15%;">
     </div>
 
+    <!-- <a
+          href="https://www.linkedin.com/in/madori-solomon-aba4a3186/"
+          class="fa-brands fa-linkedin"
+        ></a>
+        <a href="https://github.com/msolomon25" class="fa-brands fa-github"></a> -->
+
     </div>
   </div>
 

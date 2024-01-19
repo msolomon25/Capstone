@@ -763,6 +763,13 @@ font-size: 200%;
 text-decoration: none;
 }
 
+.fa-brands:hover{
+  color: var(--white);
+
+font-size: 220%;
+
+}
+
 .centeredBlack{
   grid-column-start: 2;
   grid-row-start: 2;

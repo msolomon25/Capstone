@@ -19,31 +19,28 @@ function render(state = store.Home) {
 }
 
 function afterRender(state) {
-
-  //carousel
-
-  const prev = document.getElementById("prev-btn");
-  const next = document.getElementById("next-btn");
-  const list = document.getElementById("item-list");
-  const itemWidth = 400;
-  const padding = 20;
-
-  prev.addEventListener("click", () => {
-    list.scrollLeft -= itemWidth + padding;
-  });
-  next.addEventListener("click", () => {
-    list.scrollLeft += itemWidth + padding;
-  });
-
-
-  // =======================================
-
   if (state.view === "Home") {
     // Do this stuff
     document.getElementById("callToAction").addEventListener("click", event => {
       event.preventDefault();
 
       router.navigate("/story");
+    });
+  }
+
+  //carousel
+  if (state.view === "Home") {
+    const prev = document.getElementById("prev-btn");
+    const next = document.getElementById("next-btn");
+    const list = document.getElementById("item-list");
+    const itemWidth = 400;
+    const padding = 20;
+
+    prev.addEventListener("click", () => {
+      list.scrollLeft -= itemWidth + padding;
+    });
+    next.addEventListener("click", () => {
+      list.scrollLeft += itemWidth + padding;
     });
   }
 
